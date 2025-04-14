@@ -28,8 +28,8 @@ class UsersRepository {
 
     //atualizando o usuário
     update(user, id) {
-        const SQL = "UPDATE users SET WHERE id=?;"
-        return CONSULTA(SQL, [user, id], 'Não foi possível atualizar o usuário')
+        const SQL = "UPDATE users SET nome = ?, cpf = ?, nascimento = ?, cargo = ?, ativo = ? WHERE id = ?;"
+        return CONSULTA(SQL, [user.nome, user.cpf, user.nascimento, user.cargo, user.ativo, id], 'Não foi possível atualizar o usuário');
     }
 
     //deletando o usuário

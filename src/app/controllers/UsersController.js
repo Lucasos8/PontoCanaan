@@ -52,6 +52,10 @@ class UsersController {
     async update(req, res) {
         const USER = req.body
         const ID = req.params.id
+        console.log(USER)
+        console.log("------------")
+        console.log(ID)
+        console.log("------------")
         const RESULT = await UsersRepository.update(USER, ID)
         return res.redirect('/');
     }

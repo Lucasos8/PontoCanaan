@@ -57,13 +57,11 @@
                 <br>
                 <input type="text" name="cargo" value="<%= user[0].cargo %>" required>
                 <br><br>
-                <label>  
-                  <input type="checkbox" name="ativo" value="true" <% if (user[0].ativo) { %> checked <% } %>>  
-                  Usuário ativo  
-              </label>  
+                <input type="checkbox" id="userCheckbox" <%= user[0].ativo ? 'checked' : '' %> onchange="updateValue(this)">  
+                <input type="hidden" name="ativo" id="statusValue" value="<%= user[0].ativo ? 0 : 1 %>"> Deixe marcado para desativar usuário.
                 <br>
                 <br>
-                <button class="login-button" type="submit">Cadastrar</button>
+                <button class="login-button" type="submit">Atualizar</button>
             </form>
             <form action="/delete/<%= user[0].id %>" method="post">
               <button class="login-button" type="submit">Deletar</button>
@@ -71,4 +69,10 @@
         </div>
      
 </body>
+<script>
+  function updateValue(checkbox) {  
+    const statusValue = document.getElementById('statusValue');  
+    statusValue.value = checkbox.checked ? 0 : 1;  
+}  
+</script>
 </html>

@@ -15,7 +15,7 @@ ROUTER.get('/editaUsuario/:id', UsersController.show)//teste
 //Rotas para o CRUD dos usuários
 ROUTER.post('/cadastroUser', UsersController.create)//criar novo usuário
 ROUTER.post('/editarUser/:id', UsersController.update)//editar o usuário
-//ROUTER.post('', UsersController.delete)//deletar o usuário
+ROUTER.post('/delete/:id', UsersController.delete)//deletar o usuário
 
 //Rotas para o registro de horas.
 

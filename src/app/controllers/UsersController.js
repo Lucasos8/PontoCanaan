@@ -5,7 +5,6 @@ class UsersController {
         try {
             //Aqui vai guardar todos os dados preenchido no forms de cadastro na constante USER.
             const USER = req.body;
-            console.log(USER)
             
             //Aqui em RESULT é onde chamamos a função de criar em usursRepository com os dados guardado na constante USER mas a constate RESULT não vai ser usada em nada.
             const RESULT = await UsersRepository.create(USER)

@@ -6,7 +6,7 @@ const ROUTER = Router()
 
 //Rotas das páginas mais usadas
 ROUTER.get('/', UsersController.showAllIndex)//tela inicial
-//ROUTER.get('', (req, res) => {res.render('registrarHoras')})//tela de resgistrar horas
+ROUTER.get('/ponto', (req, res) => {res.render('ponto')})//tela de resgistrar horas
 //ROUTER.get('', (req, res) => {res.render('consultarHoras')})//tela onde consulta e baixa os registros
 ROUTER.get('/cadastroUsuario', (req, res) => {res.render('cadastroUsuario')})//tela para cadastrar novo usuário
 ROUTER.get('/listaUsuario', UsersController.showAllEditar)//tela para selecionar o usuario que vai ser editado.

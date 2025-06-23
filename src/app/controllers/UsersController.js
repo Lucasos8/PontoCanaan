@@ -1,31 +1,34 @@
 import UsersRepository from "../repositories/UsersRepository.js"
+import { DateTime } from 'luxon';
 
 class UsersController {
     async create(req, res) {
         try {
             //Aqui vai guardar todos os dados preenchido no forms de cadastro na constante USER.
             const USER = req.body;
-            
+
             //Aqui em RESULT é onde chamamos a função de criar em usursRepository com os dados guardado na constante USER mas a constate RESULT não vai ser usada em nada.
             const RESULT = await UsersRepository.create(USER)
             return res.redirect('/')
-            
+
         } catch (error) {
             console.error(error);
             return res.status(500).json({ message: 'Erro ao cadastrar o usuário.' })
         }
     }
 
-     //mostrar todos os usuários cadastrados no sistema na pag listaUsuario.
-     async showAllEditar(req, res) {
+    //mostrar todos os usuários cadastrados no sistema na pag listaUsuario.
+    async showAllEditar(req, res) {
         const users = await UsersRepository.findALL();
         res.render('listaUsuario', { users })
     }
 
     //mostrar todos os usuários cadastrados no sistema na pag index.
     async showAllIndex(req, res) {
+        const data = DateTime.now().setZone('America/Sao_Paulo').toFormat('yyyy-MM-dd');
+        //console.log(data);
         const users = await UsersRepository.findAllAtivos();
-        res.render('index', { users })
+        res.render('index', { users, data })
     }
 
     //pegar um usuário específico

@@ -19,7 +19,7 @@ class UsersRepository {
         const SQL = "SELECT * FROM users WHERE ativo = 1;"
         return CONSULTA(SQL, 'Não foi possível localizar usuários')
     }
-   
+
     //Mostrar 1 usuário pelo ID
     findById(id) {
         const SQL = "SELECT * FROM users WHERE id=?;"
@@ -40,5 +40,5 @@ class UsersRepository {
 
 
 
-}   
+}
 export default new UsersRepository()

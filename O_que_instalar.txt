@@ -1,7 +1,0 @@
-npm init -y
-npm install express --save
-nom install express-session
-npm install nodemon
-npm install mysql
-npm install cookie-parser
-npm install ejs

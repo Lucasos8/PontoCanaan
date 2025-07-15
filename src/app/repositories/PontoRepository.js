@@ -24,7 +24,12 @@ class PontoRepository {
 
     }
 
+    consultaPonto(user_id) {
+         const SQL = "SELECT * FROM livro_de_ponto WHERE user_id=?"
+        // console.log(SQL)
+        return CONSULTA(SQL, user_id, 'Não foi possível localizar o registro')
 
+    }
 
 }
 

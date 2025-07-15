@@ -47,38 +47,36 @@
         </nav>
     </div>
     <div class="content">
-        <h1>Usuários</h1>
+        <h1>Horas Registradas</h1>
         <div>
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th>Data de aniversário</th>
-                        <th>Cargo</th>
-                        <th>Registar horas</th>
-                        <th>Consultar horas Horas</th>
+                        <th>Data</th>
+                        <th>Entrada</th>
+                        <th>Saída intervalo</th>
+                        <th>Retorno Intervalo</th>
+                        <th>Saída</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% users.forEach(user=> { %>
+                    <% registro.forEach(registro=> { %>
                         <tr>
                             <td>
-                                <%= user.nome %>
+                                <%= registro.data %>
                             </td>
                             <td>
-                                <%= user.nascimento %>
+                                <%= registro.entrada %>
                             </td>
                             <td>
-                                <%= user.cargo %>
+                                <%= registro.saida_intervalo %>
                             </td>
-                            <td><a href="/ponto/<%= user.id%>/<%= data %>"><button class="btn btn-primary"
-                                        name="registrar" type="submit">
-                                        Registrar
-                                    </button></a></td>
-                            <td><a href="/consulta/<%= user.id %>"><button class="btn btn-info" name="consultar"
-                                        type="submit">
-                                        Consultar
-                                    </button></a></td>
+                            <td>
+                                <%= registro.retorno_intervalo %>
+                            </td>
+                            <td>
+                                <%= registro.saida %>
+                            </td>
                         </tr>
                         <% }) %>
                 </tbody>

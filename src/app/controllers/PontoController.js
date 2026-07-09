@@ -1,4 +1,5 @@
 import PontoRepository from "../repositories/PontoRepository.js"
+<<<<<<< HEAD
 import UsersRepository from "../repositories/UsersRepository.js";
 import UsersController from "./UsersController.js";
 import XLSX from 'xlsx';
@@ -6,6 +7,11 @@ import XLSX from 'xlsx';
 
 class PontoController {
   //olhar o registro de ponto da pessoa que você selecionar. 
+=======
+
+class PontoController {
+//olhar o registro de ponto da pessoa que você selecionar. 
+>>>>>>> 21efcf23e1b3f18d85a26956a5290fdd36700610
   async consultaPonto(req, res) {
     const user_id = req.params.user_id
      try {
@@ -14,6 +20,7 @@ class PontoController {
     } catch (error) {
       console.error("Deu ruim", error)
     }
+<<<<<<< HEAD
   }
 
   //Faz a consulta do ponto filtrando por data e dera um excel .
@@ -79,6 +86,11 @@ class PontoController {
         res.status(500).send('Erro ao gerar a planilha.');
     }
   }
+=======
+
+
+}
+>>>>>>> 21efcf23e1b3f18d85a26956a5290fdd36700610
 
   //Em ShowRegistroHora vai mostrar dados de usuário caso exista, se não existe não mostra nada     
   async ShowRegistroHora(req, res) {

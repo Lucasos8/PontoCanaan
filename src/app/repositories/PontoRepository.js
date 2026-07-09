@@ -25,17 +25,24 @@ class PontoRepository {
     }
 
     consultaPonto(user_id) {
+<<<<<<< HEAD
          const SQL = "SELECT * FROM livro_de_ponto WHERE user_id=? ORDER BY data DESC"
+=======
+         const SQL = "SELECT * FROM livro_de_ponto WHERE user_id=?"
+>>>>>>> 21efcf23e1b3f18d85a26956a5290fdd36700610
         // console.log(SQL)
         return CONSULTA(SQL, user_id, 'Não foi possível localizar o registro')
 
     }
 
+<<<<<<< HEAD
     consultaPorPeriodo(user_id, dataInicial, dataFinal) {
         const SQL = `SELECT * FROM livro_de_ponto WHERE user_id = ? AND data BETWEEN ? AND ? ORDER BY data;`;
         return CONSULTA( SQL, [user_id, dataInicial, dataFinal], 'Não foi possível localizar os registros.');
     }
 
+=======
+>>>>>>> 21efcf23e1b3f18d85a26956a5290fdd36700610
 }
 
 export default new PontoRepository

@@ -14,20 +14,14 @@
   "dependencies": {
     "cookie-parser": "^1.4.7",
     "ejs": "^3.1.10",
-<<<<<<< HEAD
     "express": "^5.2.1",
     "express-session": "^1.19.0",
     "luxon": "^3.7.2",
     "mysql": "^2.18.1",
     "mysql2": "^3.22.4",
-    "nodemon": "^3.1.14",
     "xlsx": "^0.18.5"
-=======
-    "express": "^5.1.0",
-    "express-session": "^1.18.1",
-    "luxon": "^3.6.1",
-    "mysql": "^2.18.1",
-    "nodemon": "^3.1.9"
->>>>>>> 21efcf23e1b3f18d85a26956a5290fdd36700610
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }

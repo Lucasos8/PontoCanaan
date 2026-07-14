@@ -21,12 +21,8 @@ ROUTER.post('/delete/:id', UsersController.delete)//deletar o usuário
 ROUTER.post('/Registro/:id', PontoController.editaRegistro)//Para editar o Registro de horas.
 ROUTER.post('/Registro/', PontoController.criaRegistro)//Para criar um registro de horas.
 
-<<<<<<< HEAD
 //Rota para criar planilha
 ROUTER.get('/exportar/:user_id', PontoController.exportarPeriodo);//criar planilha. 
-=======
-
->>>>>>> 21efcf23e1b3f18d85a26956a5290fdd36700610
 
 
 export default ROUTER
